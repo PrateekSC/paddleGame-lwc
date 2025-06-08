@@ -69,7 +69,6 @@ export default class PaddleGame extends LightningElement {
         this.selectedMode = event.target.value;
     }
 
-    // Optional: Mouse movement (keep or remove)
     movePaddle(event) {
         const rect = this.template.querySelector('.game-container').getBoundingClientRect();
         const mouseX = event.clientX - rect.left;
