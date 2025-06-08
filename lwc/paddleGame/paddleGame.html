@@ -1,0 +1,17 @@
+<template>
+    <div class="slds-is-relative mode-select">
+        <lightning-combobox
+            name="mode"
+            label="Select Game Mode"
+            value={selectedMode}
+            options={modeOptions}
+            onchange={handleModeChange}
+            disabled={modeLocked}
+            class="slds-is-relative mode-select"
+        ></lightning-combobox>
+    </div>
+    <div class="slds-scrollable_none slds-is-relative game-container" onmousemove={movePaddle} onclick={handleRestart} ontouchmove={handleTouchMove}>
+        <div class="slds-is-absolute ball" style={ballStyle}></div>
+        <div class="slds-is-absolute paddle" style={paddleStyle}></div>
+    </div>
+</template>
